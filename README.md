@@ -1,21 +1,27 @@
-# the-duck-repository
+# The-Duck-Repository
+This is a take home assignment to be completed for FreshWorks.io
 
-> A Vue.js project
+## Author
+Chiyedza Mugavazi
 
-## Build Setup
+## Build With
+This project was built with the following technologies:
+- Vue.js
+- Node.js
+- ExpressJS
+- MySQL
 
-``` bash
-# install dependencies
+## Running Locally
+To run the web application locally, please install the necessary npm packages with:
+```bash
 npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Once the necessary packages have been installed, the below command will run the web application locally
+```bash
+npm start
+```
+which is an alias for the following commands in package.json:
+```bash
+npm run build && node index.js
+``` 
