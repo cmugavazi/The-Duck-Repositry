@@ -1,6 +1,12 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <b-navbar variant="info" class="navbar" type="dark">
+      <b-navbar-brand href="Home">The Ducking Repo</b-navbar-brand>
+      <b-navbar-nav class="ml-auto">
+        <router-link class = "nav-link" to="/user">Add</router-link>   
+        <router-link class = "nav-link" to="/adminLogin">Admin</router-link>      
+      </b-navbar-nav>
+    </b-navbar>
     <router-view/>
   </div>
 </template>
@@ -18,6 +24,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 100px;
+}
+.navbar {
+  color: white;
+  margin-bottom: 50px;
 }
 </style>
