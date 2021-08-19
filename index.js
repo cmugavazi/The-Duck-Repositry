@@ -34,7 +34,7 @@ app.get("/", (req, res, next) => {
 //retrieves all information from Ducks table;
 app.get('/all', (req, res) => {
     connection.query(
-        "SELECT * FROM Ducks",
+        "SELECT date_format(feedingTime, '%D %M %Y') as 'Feeding Time', foodType, duckLocation, numOfDucks, foodQty FROM Ducks;",
         function(err, results, fields) {
           if (err == null && results.length > 0) {
             res.json(results);
