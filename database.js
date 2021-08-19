@@ -7,7 +7,7 @@ var db = function() {
     connection = mysql.createConnection({
         host: 'localhost',
         user: 'root',
-        password: '',
+        password: 'Malachi97',
         database: 'freshworks'
     });
     return connection;
