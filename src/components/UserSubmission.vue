@@ -17,16 +17,26 @@
             <b-form-group id="fieldset-1" label="How much food did the ducks eat? (in grams)" label-for="foodAmount">
                 <b-form-spinbutton id="foodAmount" v-model="foodAmount" min="1" max="1000" placeholder="0"></b-form-spinbutton>
             </b-form-group>
-            <b-button variant="primary" type="submit" v-on:click="onSubmit()">Submit</b-button>
+            <b-button variant="primary" type="submit" v-on:click="submitInfo(`${feedingTime}`, `${food}`, `${location}`, `${duckQty}`, `${foodAmount}`)">Submit</b-button>
         </b-form>
 
     </div>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
     methods: {
-        onSubmit(){
+        //takes user inputs and uses them as request for the post api
+        submitInfo(feedingTime, food, location, duckQty, foodAmount){
+            axios.post('http://localhost:5000/addDucks', {
+                feedingTime: feedingTime,
+                foodType: food,
+                duckLocation: location,
+                numOfDucks: duckQty,
+                foodQty: foodAmount
+            });
             alert("Thank you for your submission!");
         }
     },

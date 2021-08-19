@@ -9,12 +9,12 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/DuckInfo',
       name: 'DuckInfo',
       component: DuckInfo
     },
     {
-      path: '/user',
+      path: '/',
       name: 'UserSubmission',
       component: UserSubmission
     },
