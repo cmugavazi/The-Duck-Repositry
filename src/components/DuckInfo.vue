@@ -1,7 +1,7 @@
 <template>
 <div id="main">
     <div class="duckTable">
-        <b-table caption-top>
+        <b-table :items="ducks" caption-top>
         <template #table-caption>This is a table  will contain information on the duck.</template>
         </b-table>
   </div>
@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: 'DuckInfo',
   data(){
@@ -17,8 +18,14 @@ export default {
         food: '',
         location: '',
         duckQty: '',
-        foodAmount: ''
+        foodAmount: '',
+        ducks: []
       }
+    },
+    async created() {
+      const ducks = await axios.get("http://localhost:5000/all");
+      console.log(ducks.data);
+      this.ducks = ducks.data;
     }
 }
 </script>
