@@ -3,7 +3,7 @@ const cors = require("cors");
 
 var ss = require("serve-static");
 var path = require("path");
-var connection = require('./database.js')();
+var connection = require('./db.js')();
 
 
 var app = express();
