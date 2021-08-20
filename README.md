@@ -10,6 +10,11 @@ This project was built with the following technologies:
 - Node.js
 - ExpressJS
 - MySQL
+- BootstrapVue
+
+## Prerequisites
+- MySQL Workbench
+
 
 ## Running Locally
 To run the web application locally, please install the necessary npm packages with:
@@ -17,11 +22,10 @@ To run the web application locally, please install the necessary npm packages wi
 npm install
 ```
 
-Once the necessary packages have been installed, the below command will run the web application locally
+Once the necessary packages have been installed, the below commands will run the web application locally
 ```bash
-npm start
+npm start 
 ```
-which is an alias for the following commands in package.json:
 ```bash
-npm run build && node index.js
-``` 
+npm run dev 
+```

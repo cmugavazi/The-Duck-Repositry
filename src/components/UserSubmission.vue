@@ -49,7 +49,6 @@ export default {
     },
     data() {
          const today = new Date();
-         
          //ensures user cannot input a future date in the calendar
          const maxDate = new Date(today);
         return {
