@@ -1,13 +1,13 @@
 const express = require('express');
 const cors = require("cors");
 
-var serveStatic = require("serve-static");
+var ss = require("serve-static");
 var path = require("path");
 var connection = require('./database.js')();
 
 
 var app = express();
-app.use(serveStatic(__dirname + "/dist"));
+app.use('/', ss(path.join(__dirname, '/dist')));
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -59,5 +59,5 @@ app.get('/all', (req, res) => {
     });
 
 app.listen(port);
-console.log(port);
+console.log("Server has started at " + port);
 

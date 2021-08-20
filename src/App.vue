@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <b-navbar variant="info" class="navbar" type="dark">
-      <b-navbar-brand href="Home">The Ducking Repo</b-navbar-brand>
+    <b-navbar variant="info" class="navbar" type="light">
+      <b-navbar-brand><router-link class = "nav-link" to="/"><a>The Duck Repository Project</a></router-link>      
+</b-navbar-brand>
       <b-navbar-nav class="ml-auto">
         <router-link class = "nav-link" to="/DuckInfo">The Duck Database</router-link>      
       </b-navbar-nav>
@@ -26,7 +27,9 @@ export default {
   margin: 100px;
 }
 .navbar {
-  color: white;
   margin-bottom: 50px;
+}
+a{
+  color: white;
 }
 </style>

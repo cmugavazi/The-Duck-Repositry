@@ -4,14 +4,14 @@
         <p>Thank you very much for participating in my study. Whenever you find yourself feeding a flock of ducks, please take note of the date, the food you fed them, the location and how much the ducks were fed.</p>
         <p style="color: red">{{message}}</p>
         <b-form class="userForm">
-            <b-form-group id="fieldset-1" label="Date" label-for="feedingTime">
-                <b-form-datepicker  id="feedingTime" v-model="feedingTime" :max="max" placeholder="What day did you feed the ducks"></b-form-datepicker>
+            <b-form-group id="fieldset-1" label="What date did you feed the ducks?" label-for="feedingTime">
+                <b-form-datepicker  id="feedingTime" v-model="feedingTime" :max="max" placeholder=""></b-form-datepicker>
             </b-form-group>
-            <b-form-group id="fieldset-1" label="Food" label-for="food">
-                <b-form-input id="food" v-model="food" required></b-form-input>
+            <b-form-group id="fieldset-1" label="What did you feed the ducks?" label-for="food">
+                <b-form-input id="food" v-model="food" required placeholder="e.g.: breadcrumbs"></b-form-input>
             </b-form-group>
-            <b-form-group id="fieldset-1" label="Where did you feed the ducks" label-for="location">
-                <b-form-input id="location" v-model="location" required></b-form-input>
+            <b-form-group id="fieldset-1" label="Which city did you feed the ducks?" label-for="location">
+                <b-form-input id="location" v-model="location" placeholder="City, Country" required></b-form-input>
             </b-form-group>
             <b-form-group id="fieldset-1" label="How many ducks were there" label-for="duckQty">
                 <b-form-spinbutton id="duckQty" v-model="duckQty" min="1" max="100" placeholder="0" required></b-form-spinbutton>
@@ -66,9 +66,6 @@ export default {
 </script>
 
 <style scoped>
-#main {
-    
-}
 .userForm {
     margin: 250px;
     margin-top: 20px;

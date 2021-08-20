@@ -18,10 +18,5 @@ export default new Router({
       name: 'UserSubmission',
       component: UserSubmission
     },
-    {
-      path: '/admin',
-      name: 'AdminLogin',
-      component: AdminLogin
-    }
   ]
 })

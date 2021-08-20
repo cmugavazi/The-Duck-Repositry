@@ -4,9 +4,10 @@
   "description": "A Vue.js project",
   "author": "cmugavazi <52016785+cmugavazi@users.noreply.github.com>",
   "private": true,
+  "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "node index.js",
+    "start": "npm run build && node index.js",
     "build": "node build/build.js"
   },
   "dependencies": {
